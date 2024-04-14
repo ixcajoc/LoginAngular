@@ -1,0 +1,20 @@
+<app-header></app-header>
+<section class="container">
+    
+    <div class="container d-flex justify-content-between align-items-center my-5">
+        <h2>Users</h2>
+        <a class="btn btn-primary" href="/new-user" >New User</a>
+
+
+    </div>
+    <div class="row text-center">
+        <div class="col d-flex my-2 justify-content-center" *ngFor="let user of usersData">
+            <app-user-card  [user]="user"></app-user-card>            
+        </div>
+        
+    </div>
+
+
+</section>
+
+<app-footer/>
