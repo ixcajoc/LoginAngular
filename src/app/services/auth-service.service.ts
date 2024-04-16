@@ -36,6 +36,7 @@ export class AuthService {
     }
     return null;
   }
+
   
   auth(post: UserLogin ){
     
@@ -64,10 +65,10 @@ export class AuthService {
   isLoggedIn(): boolean {
     const token = this.getToken();
     if (token) {
-      const decodedToken: any = jwtDecode(token); // Decodifica el token
+      const decodedToken: any = jwtDecode(token); // Decodifico el token
       localStorage.setItem('currentUser', JSON.stringify(decodedToken));
 
-      const expirationDate = new Date(decodedToken.exp * 1000); // Multiplica por 1000 para convertir a milisegundos
+      const expirationDate = new Date(decodedToken.exp * 1000); // Multiplico por 1000 para convertir a milisegundos
       return expirationDate > new Date(); // true or false
     }
     return false;
@@ -88,13 +89,22 @@ export class AuthService {
     return this.http.get(`${this.apiUrl}/users`, { headers });
   }
 
+  getUserByid(id:number): Observable<any>{
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'access_token': `${this.getToken()}`,
+  
+    });
+    return this.http.get(`${this.apiUrl}/users/${id}`, { headers });
+ 
+  }
+
   GetTypesUsers(): Observable<any>{
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'access_token': `${this.getToken()}`,
     });
     return this.http.get(`${this.apiUrl}/users/types`, { headers });
-
 
   }
 

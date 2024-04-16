@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { AuthService } from '../services/auth-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import Swal from 'sweetalert2';
 
 
 @Component({
@@ -36,8 +35,6 @@ export default class LoginComponent {
 
    }
 
-  
-
   auth(){
     let post = {
       user: this.loginForm.value.user??'',
@@ -47,10 +44,6 @@ export default class LoginComponent {
 
     this.AuthService.auth(post);
 
-
-    //muestro en consola
-    // this.getUsers();
-    // this.getTypeUsers();
     
   }
 
@@ -70,22 +63,4 @@ export default class LoginComponent {
 
   }
 
-
-  
-  // createUser(){
-  //   let newUser = {
-  //     user: 'Chiqui',
-  //     password: 'bebito',
-  //     name:'Jhon',
-  //     last_name: 'Wick',
-  //     type_user: 2,
-  //   }
-
-  //   this.AuthService.newUser(newUser);
-    
-  // }
-
-  // removeToken(){
-  //   this.AuthService.removeToken();
-  // }
 }

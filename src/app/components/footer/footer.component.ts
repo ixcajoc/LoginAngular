@@ -4,8 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-footer',
   standalone: true,
   imports: [],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  template: `
+
+    <div class="card mt-5 py-3 text-center">
+        <p class="m-0">Todos los los derechos reservados</p>
+    </div>
+  `,
 })
 export class FooterComponent {
 

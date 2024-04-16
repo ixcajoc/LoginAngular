@@ -16,6 +16,12 @@ export const routes: Routes = [
         loadComponent: () => import ('./components/welcome/welcome.component'),
         canMatch:[authGuard],
     },
+    {
+        path: "details/:id",
+        title: 'User Datails',
+        loadComponent: () => import ('./components/welcome/user-information/user-information.component'),
+        canMatch:[authGuard]
+    },
 
     {
         path: 'new-user',
