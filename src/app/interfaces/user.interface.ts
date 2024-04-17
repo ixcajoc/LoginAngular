@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface UserLogin {
     user: string,
     password: string
@@ -6,3 +7,31 @@ export interface UserLogin {
 
 
 
+=======
+export interface UserLogin {
+    user: string,
+    password: string
+}
+
+export interface User {
+    id:        number;
+    user:      string;
+    type_user: TypeUser;
+}
+
+export interface TypeUser {
+    type_user_id: number;
+    type:         string;
+    active:       boolean;
+    descripction: string;
+}
+
+export interface NewUser {
+    user:      string;
+    password:  string;
+    name:      string;
+    last_name: string;
+    type_user: number;
+}
+
+>>>>>>> ed1772cfcc1bf866d98e5a5695a9d11872a7cbc2

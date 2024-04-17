@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 body {
     margin: 0;
@@ -5,3 +6,15 @@ body {
 
 }
 
+=======
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: normal;
+    font-size: 100%;
+    color: #1b262c;
+    
+    margin: 0;
+    background-color: #0f4c75;
+}
+>>>>>>> ed1772cfcc1bf866d98e5a5695a9d11872a7cbc2
